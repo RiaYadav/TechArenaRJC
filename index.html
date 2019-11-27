@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>techAura</title>
+    <meta name="Description" content="A javascript countdown clock or timer with beautiful HTML and CSS styling that is simple to use in any project or on any website .">
+<meta name="Keywords" content="javascript, js, countdown, clock, timer, css, html, website, design, beautiful timer, countdown clock, countdown timer, javascript timer, javascript countdown clock, javascript countdown timer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="c1.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+
+
+	 <script type="text/javascript">
+   $(document).ready(function ()
+    {
+     $('div.top').click(function()
+      {
+        $('html, body').animate({
+          scrollTop: $("div.t1").offset().top
+           }, 1000)
+           }),
+         $('div.mid').click(function ()
+         {
+           $('html, body').animate({
+             scrollTop: $("div.t2").offset().top
+             }, 1000)
+           }),
+           $('div.last').click(function (){
+             $('html, body').animate({
+               scrollTop: $("div.t3").offset().top
+             }, 1000)
+           })
+   });
+    </script>
+    <script>
+        $('.navbar-collapse a').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
+    </script>
+  </head>
+  <body>
+
+
+    <section id="title">
+
+      <nav class="navbar  fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><img src="logo1.png" width="60" height="40" alt="">TechArena</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link" href="about.html">About Us</a>
+          </li>
+
+
+          <li class="nav-item ">
+              <a class="nav-link" href="Sponsors.html">Sponsors</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+  </section>
+
+
+<!--<section class="slideshow">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="pic112.jpg" height="500px" alt="First slide" >
+        <div class="carousel-caption d-md-block">
+          <h1 class="slideshow-firsttext container-fluid">TechArena 2K19</h1>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <img class="d-block w-100" src="code1.jpg" height="500px" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="slideshow-Secondtext"></h1>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <img class="d-block w-100" src="slide8.jpg" height="500px" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+
+          <h1 class="slideshow-Thirdtext "></h1>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<section>
+  <div class="mainpage container-fluid">
+    <!--<img class="mainlogo" src="TechArena.png" width="500px" height="500px"></img>-->
+    <div class="display">
+		<div id="clock" class="clock">
+			<h1 class="event_title">Tech Arena Starts in</h1>
+			<div id="numbers">
+				<span class="days"></span>
+				<span class="hours"></span>
+				<span class="minutes"></span>
+				<span class="seconds"></span>
+			</div>
+			<div id="units">
+				<span>Days</span>
+				<span>Hours</span>
+				<span>Minutes</span>
+				<span>Seconds</span>
+			</div>
+
+		</div>
+		<div id="door" class="hide">
+			<h1 class="event_title">Event Is Live</h1>
+			<!--<p class="action_caption">Click the button below to enter Live Stream</p>
+			<button class="call_to_action_button" type="button" onclick="liveStream()">Enter Live Stream!</button>-->
+		</div>
+	</div>
+  <script src="timer.js"></script>
+  </div>
+</section>
+
+
+  <section id="events" >
+  <div class="eventstech container-fluid" >
+    <div class="row">
+      <div class="event-column col-lg-4 col-sm-6 ">
+        <div class="card h-100">
+            <div class="card-body">
+                  <h2> Technical Events </h2>
+                  <ul>
+                    <li>Code Mania</li>
+                    <li>Solve to Evolve</li>
+                    <li>Learn & Earn</li>
+                    <li>Debugging</li>
+                  </ul>
+                  <div class="top">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Details</button>
+                  </div>
+            </div>
+        </div>
+      </div>
+      <div class=" event-column col-lg-4 col-sm-6" >
+        <div class="card h-100">
+
+            <div class="card-body">
+              <h2> Non-Technical Events </h2>
+              <ul>
+                <li>Presentation</li>
+                <li>Minute to WinIt</li>
+                <li>Tech-Exhibition</li>
+                <li>Quiz with Ease</li>
+              </ul>
+              <div class="mid">
+                <button class="btn btn-outline-primary my-2 my-sm-0"  type="submit">Details</button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class=" event-column col-lg-4">
+        <div class="card h-100">
+
+            <div class="card-body">
+              <h2> Gaming Events </h2>
+              <ul>
+                <li>Pubg Mobile</li>
+                <li>CS Go</li>
+                <li>Mini Militia</li>
+              </ul>
+              <div class="last">
+                <button class="btn btn-outline-primary my-2 my-sm-0"  type="submit">Details</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+ </div>
+  </section>
+
+  <section id="tech-events-1">
+  <div class="container-fluid t1" >
+  <h1 class="heading-of-event">Technical Events</h1>
+  <div class="row">
+    <div class="event-column col-lg-3 col-sm-6 ">
+      <div class="card h-100">
+      <img class="card-img-top" src="codemania.jpg" height="250px" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Code Mania &nbsp; <span style="color: #ff00ff">₹30</span> </h5>
+            <p class="card-text d-lg-inline-flex p-2">Participants will have 100 points at the beginning, they’ll be asked to write a code.We will deduct points on basis of loops, conditions and all at the end one who gets the output and is remaining with maximum number of points wins the round.</p>
+          </div>
+          <div class="card-body">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit" onclick="window.location.href = 'https://forms.gle/ghCx7gH3NLKHxiCK9';">Register Now</button>
+          </div>
+      </div>
+    </div>
+
+    <div class=" event-column col-lg-3 col-sm-6" >
+      <div class="card h-100">
+        <img class="card-img-top" src="algorithm.jpg" height="250px" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Solve & Evolve &nbsp; <span style="color: #ff00ff">₹30</span> </h5>
+              <p class="card-text d-lg-inline-flex p-2">You have to write the logic(algorithm) of the problem asked to them and hence providing them open hands on any syntax based code but logic must be feasible and appropriate.</p>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit" onclick="window.location.href = 'https://forms.gle/icjQ6UoFgfrLBS8YA';">Register Now</button>
+            </div>
+
+      </div>
+  </div>
+    <div class=" event-column col-lg-3 col-sm-6">
+      <div class="card h-100">
+        <img class="card-img-top" src="blankCode.jpg" height="250px" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Learn & Earn &nbsp; <span style="color: #ff00ff">₹30</span> </h5>
+              <p class="card-text d-lg-inline-flex p-2">We will focus on web development in this event , we will teach them some front – end developing tools in 10-15min and ask them to replicate the same in 15 -20 mins.Basically we will include responsive web pages to be made.Eg: if we teach how to make a button they have to replicate the page which has 2-3 buttons of different color.</p>
+            </div>
+            <div class="card-body">
+              <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit" onclick="window.location.href = 'https://forms.gle/Lk4Jq5ZYQVBBT72h7';">Register Now</button>
+            </div>
+
+      </div>
+  </div>
+
+  <div class=" event-column col-lg-3 col-sm-6">
+    <div class="card h-100">
+      <img class="card-img-top" src="debug.jpg" height="250px" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Debugging &nbsp; <span style="color: #ff00ff">₹30</span> </h5>
+            <p class="card-text d-lg-inline-flex p-2">A code of with full of bugs and syntactical error will be given as a question to participants he/she has to de-bug it and show us the output.</p>
+          </div>
+          <div class="card-body">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit" onclick="window.location.href = 'https://forms.gle/YHrvHLhJSbpDQKw6A';">Register Now</button>
+          </div>
+
+    </div>
+</div>
+
+ </div>
+</section>
+
+ <section id=non-tech-events-1>
+ <div class="container-fluid t2">
+ <h1 class="heading-of-event">Non-Technical Events</h1>
+ <div class="row">
+   <div class="event-column col-lg-3 col-sm-6">
+     <div class="card h-100">
+     <img class="card-img-top" src="ppt.jpg" height="250px" alt="Card image cap">
+         <div class="card-body">
+           <h5 class="card-title">Presentation &nbsp; <span style="color: #ff00ff">₹50</span> </h5>
+           <p class="card-text">Team of two or single participant can present their ideas through the presentation based on one of the topics stated below within the time span of ten minutes.</br>1.Topic 1</br>2.Topic 2</br>3.Topic 3</p>
+         </div>
+         <div class="card-body">
+           <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit"  onclick="window.location.href = 'https://forms.gle/L9JRZKKc1T2Nb1fh6';" >Register Now</button>
+         </div>
+     </div>
+   </div>
+
+   <div class="event-column col-lg-3 col-sm-6">
+     <div class="card h-100">
+     <img class="card-img-top" src="ppt1.jpg" height="250px" alt="Card image cap">
+         <div class="card-body">
+           <h5 class="card-title">Tech-Exhibition &nbsp; <span style="color: #ff00ff">₹40</span> </h5>
+           <p class="card-text">We inivite you all to display your technical projects in our campus and get the chance to win the BEST PROJECT .Winner gets the CASH PRIZE. Team of two or single participation is allowed</br>Please bring your equipments and laptops(if needed) along with you.</p>
+         </div>
+         <div class="card-body">
+           <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit"   onclick="window.location.href = 'https://forms.gle/AUke8DCt3a7SA2jNA';" >Register Now</button>
+         </div>
+     </div>
+   </div>
+
+   <div class="event-column col-lg-3 col-sm-6">
+     <div class="card h-100">
+     <img class="card-img-top" src="minutetowinit.jpg" height="250px" alt="Card image cap">
+         <div class="card-body">
+           <h5 class="card-title">Minute To WinIt &nbsp; <span style="color: #ff00ff">₹30</span> </h5>
+           <p class="card-text">Come and enjoy some quick games and take home loads of sweet memory along with some sweet prizes.</p>
+         </div>
+         <div class="card-body">
+           <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit" onclick="window.location.href = 'https://forms.gle/Sod4EWtbuDJpdAG1A';" >Register Now</button>
+         </div>
+     </div>
+   </div>
+
+   <div class="event-column col-lg-3 col-sm-6">
+     <div class="card h-100">
+     <img class="card-img-top" src="quiz.jpg" height="250px" alt="Card image cap">
+         <div class="card-body">
+           <h5 class="card-title">Quiz With Ease &nbsp; <span style="color: #ff00ff">₹30</span> </h5>
+           <p class="card-text"> Let's Quiz to test the memory with ease, shall we? Only team of two participants is allowed.</p>
+         </div>
+         <div class="card-body">
+           <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit" onclick="window.location.href = 'https://forms.gle/vMU55wquv7MGBsHr8';"  >Register Now</button>
+         </div>
+     </div>
+   </div>
+
+ </div>
+ </section>
+
+ <section id=game-events-1>
+ <div class="container-fluid t3">
+   <h1 class="heading-of-event">Gaming Events</h1>
+   <h2 style="color: #ff66b3">Beat Us If You Can!! </br>Win Exciting<span style="color:#00ffff"> Cash Prize</span> </h2>
+   <div class="row">
+     <div class="event-column col-lg-4  col-md-6 ">
+       <div class="card h-100">
+         <img class="card-img-top" src="pubg.jpg" height="250px" alt="Card image cap">
+         <div class="card-body">
+           <h5 class="card-title">Pubg Mobile &nbsp; <span style="color: #ff00ff"> ₹120/Squad </span> </h5>
+           <p class="card-text d-lg-inline-flex p-2">" One shot one kill, No luck only skill."</br> We invite you and your squad to come and play.</br>You have to use your mobile network.</p>
+         </div>
+         <div class="card-body">
+           <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit">Register Now</button>
+         </div>
+       </div>
+     </div>
+
+   <div class=" event-column col-lg-4 col-md-6" >
+     <div class="card h-100">
+       <img class="card-img-top" src="csgo.jpg" height="250px" alt="Card image cap">
+           <div class="card-body">
+             <h5 class="card-title">CS-GO &nbsp; <span style="color: #ff00ff"> ₹250/Squad </span> </h5>
+             <p class="card-text d-lg-inline-flex p-2">"Let's go, fellas." "Let's move out!" "Let's move out." </br> We invite you and your squad to come and play.</br> You are allowed to carry your equipments such as mouse-pad, headphones for better experience and good game.</p>
+           </div>
+           <div class="card-body">
+             <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit">Register Now</button>
+           </div>
+       </div>
+     </div>
+
+     <div class=" event-column col-lg-4 " >
+       <div class="card h-100">
+         <img class="card-img-top" src="mm.png" height="250px" alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title">Mini Militia &nbsp; <span style="color: #ff00ff"> ₹40/Squad </span> </h5>
+               <p class="card-text d-lg-inline-flex p-2">"Make your grenade follow your opponent"</br> We invite you and your squad to come and play.</p>
+             </div>
+             <div class="card-body">
+               <button class="btn btn-outline-success my-2 my-sm-0" id="btn1" type="submit">Register Now</button>
+             </div>
+         </div>
+       </div>
+   </div>
+ </div>
+ </section>
+
+
+
+
+
+  <section id="copyright">
+    <div class="bottomContainer container-fluid">
+      <p>Terms&Conditions: Our gifts and prizes may or may not vary according to entry count.</p>
+      <p> ©TechAura @CS Department </p>
+    </div>
+  </section>
+
+  </body>
+</html>
